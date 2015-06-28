@@ -205,7 +205,8 @@ samp {
   font-size: 90%;
   color: #C7254E;
   background-color: #F9F2F4;
-  border-radius: .4rem; }
+  border-radius: .4rem;
+  line-height: 1.7; }
 
 .u-kbd {
   padding: 0.2rem 0.4rem;
@@ -213,4 +214,5 @@ samp {
   color: #333;
   background-color: #fff;
   border-radius: .3rem;
-  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.5); }
+  box-shadow: 0 0 0.2rem rgba(0, 0, 0, 0.5);
+  line-height: 1.7; }
