@@ -1,0 +1,24 @@
+{
+  "name": "typ",
+  "version": "1.0.0",
+  "authors": [
+    "Filipe Linhares <lip.linhares@gmail.com>"
+  ],
+  "description": "A simple and minimal typography template",
+  "main": "dist/typ.css",
+  "keywords": [
+    "typography",
+    "css",
+    "template"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/filipelinhares/typ",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "images"
+  ]
+}
