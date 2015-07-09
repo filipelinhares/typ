@@ -1,0 +1,30 @@
+{
+  "name": "typ",
+  "version": "1.0.0",
+  "description": "A simple and minimal typography template",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filipelinhares/typ.git"
+  },
+  "keywords": [
+    "css",
+    "typography",
+    "template"
+  ],
+  "authors": [
+    "Filipe Linhares <lip.linhares@gmail.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/filipelinhares/typ/issues"
+  },
+  "homepage": "https://github.com/filipelinhares/typ#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-clean": "^0.3.1",
+    "gulp-csso": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.3"
+  }
+}
