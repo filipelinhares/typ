@@ -131,9 +131,6 @@ a {
   -webkit-transition: all 0.4s;
           transition: all 0.4s; }
 
-a:visited {
-  color: #2D243B; }
-
 a:hover {
   color: #004EAB; }
 
