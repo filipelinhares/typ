@@ -16,6 +16,7 @@
 }
 
 body {
+  font-family: $body-fontFamily;
   font-size: $body-fontSize-em;
   line-height: $body-lineHeight-unitless;
   @if $debug == true {

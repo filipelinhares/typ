@@ -27,11 +27,12 @@ typ is a typography template and base style, built over the [sanitize-css][sanit
 #### .u-code
 ![Code](images/shoots/code.png)  
 #### .u-kdb
-![Kdb](images/shoots/kdb.png) .
+![Kdb](images/shoots/kdb.png)
 
 ## Configurations
 - `$body-fontSize` : `16px !default`
 - `$body-lineHeight` : `24px !default`
+- `$body-fontFamily` : `sans-serif !default`
 - `$debug` : `false !default`
 - `$lists-detailedList-symbol` :`'‣' !default`
 - `$fonts-textRendering` : `optimizeLegibility !default`

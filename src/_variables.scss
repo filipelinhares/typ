@@ -9,6 +9,7 @@
 // # ========== Root variabless
 $body-fontSize: 16px !default;
 $body-lineHeight: 24px !default;
+$body-fontFamily: sans-serif !default;
 
 $body-lineHeight-unitless: $body-lineHeight / $body-fontSize;
 $body-fontSize-em: (strip-units($body-fontSize / 10)) + em;
