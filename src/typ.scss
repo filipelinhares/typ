@@ -9,7 +9,7 @@
 // # =================================================================
 
 :root {
-  font-size: 62.5%;
+  font-size: 100%;
   hyphens: auto;
   text-rendering: $fonts-textRendering;
   text-size-adjust: 100%;
@@ -28,85 +28,82 @@ body {
 // # =================================================================
 
 h1, h2, h3, h4, h5, h6,
-.like-h1, .like-h2, .like-h3, .like-h4, .like-h5, .like-h6 {
-  margin-top: 0;
+.u-h1, .u-h2, .u-h3, .u-h4, .u-h5, .u-h6 {
+  margin-bottom: $spacer;
 }
 
-.like-h1, .like-h2, .like-h3, .like-h4, .like-h5, .like-h6 {
+// Prevent to use in inline elements
+.u-h1, .u-h2, .u-h3, .u-h4, .u-h5, .u-h6 {
   display: block;
-  font-weight: bold;
+  font-weight: $headings-fontWeight;
 }
 
 h1,
-.like-h1 {
-  margin-bottom: 2.4rem;
-  @include safe-rem(font-size, 40px);
-  line-height: 1.2;
+.u-h1 {
+  font-size: $headings-h1-fontSize;
+  margin-top: $rhythm-h1-marginTop;
+  line-height: $rhythm-h1-lineHeight;
 }
 
 h2,
-.like-h2 {
-  margin-bottom: 2.6rem;
-  @include safe-rem(font-size, 36px);
-  line-height: 1.3;
+.u-h2 {
+  font-size: $headings-h2-fontSize;
+  margin-top: $rhythm-h2-marginTop;
+  line-height: $rhythm-h2-lineHeight;
 }
 
 h3,
-.like-h3 {
-  margin-bottom: 1rem;
-  @include safe-rem(font-size, 30px);
-  line-height: 1.3;
+.u-h3 {
+  font-size: $headings-h3-fontSize;
+  margin-top: $rhythm-h3-marginTop;
+  line-height: $rhythm-h3-lineHeight;
 }
 
 h4,
-.like-h4 {
-  @include safe-rem(font-size, 24px);
-  line-height: 2;
+.u-h4 {
+  font-size: $headings-h4-fontSize;
+  margin-top: $rhythm-h4-marginTop;
+  line-height: $rhythm-h4-lineHeight;
 }
 
 h5,
-.like-h5 {
-  margin-bottom: 2.4rem;
-  @include safe-rem(font-size, 18px);
-  line-height: 1.5;
+.u-h5 {
+  font-size: $headings-h5-fontSize;
+  margin-top: $rhythm-h5-marginTop;
+  line-height: $rhythm-h5-lineHeight;
 }
 
 h6,
-.like-h6 {
-  margin-bottom: 2.4rem;
-  @include safe-rem(font-size, 16px);
-  line-height: 1.6;
+.u-h6 {
+  font-size: $headings-h6-fontSize;
+  margin-top: $rhythm-h6-marginTop;
+  line-height: $rhythm-h6-lineHeight;
 }
 
 // # Basic
 // # =================================================================
 
-p { margin-bottom: 2.3rem; }
+p { margin-bottom: $spacer; }
 
 blockquote,
-.quote {
-  padding-left: 1.5rem;
-  margin-bottom: 2.4rem;
-  margin-left: 1.5rem;
+.u-quote {
+  padding-left: $spacer;
+  margin-bottom: $spacer;
   color: #666;
-  border-left: 3px solid #ccc;
-  quotes: $fonts-quotes;
-
-  &:before { content: open-quote; }
-  &:after  { content: close-quote; }
+  border-left: $bloquote-border;
 
   p { margin-bottom: 0; }
 }
 
 em,
-.emphasis { font-style: italic; }
+.u-textEm { font-style: italic; }
 
 small,
 .small { font-size: $fonts-small-size; }
 
 b,
 strong,
-.bold { font-weight: 700; }
+.u-textBold { font-weight: 700; }
 
 abbr {
   font-weight: 600;
@@ -117,9 +114,8 @@ figcaption {
   display: block;
   font-size: inherit;
   font-style: italic;
+  margin-top: $spacer;
 }
-
-figcaption:before { content: '-'; }
 
 // # https://gist.github.com/unruthless/413930
 sub, sup {
@@ -133,19 +129,6 @@ sup { top: -0.5em; }
 sub { bottom: -0.25em; }
 var { font-style: italic; }
 
-// # Link
-// # =================================================================
-
-a {
-  color: #30BBDB;
-  text-decoration: $links-textDecoration;
-  transition: all .4s;
-}
-
-a:hover   { color: #004EAB; }
-a:active  { color: #C4E3E0; }
-
-
 // # Lists
 // # =================================================================
 
@@ -155,12 +138,13 @@ ol { list-style: decimal inside; }
 ol, ul {
   padding-left: 0;
   margin-top: 0;
+  margin-bottom: $spacer;
 }
 
 ul ul,
 ul ol,
 ol ol,
-ol ul { margin: 1.5rem 0 1.5rem 3rem; }
+ol ul { margin: $spacer 0 $spacer 3rem; }
 
 dl {
   padding: 0;
@@ -176,23 +160,27 @@ dt {
 
 dd {
   padding: 0;
-  margin: 0 0 2.4rem 0;
+  margin: 0 0 $spacer 0;
   line-height: 1.5;
 }
-
-dd:before { content: $lists-detailedList-symbol; }
 
 // # Code
 // # =================================================================
 
 pre code {
+  font-size: $code-fontSize;
   word-wrap: normal;
   white-space: -moz-pre-wrap;
   white-space: pre-wrap;
 }
 
 pre,
-code { white-space: pre; }
+code {
+  white-space: -moz-pre-wrap;
+  white-space: pre;
+  margin-top: 0;
+  margin-bottom: $spacer;
+}
 
 code,
 kbd,

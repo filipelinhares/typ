@@ -10,21 +10,3 @@
 @function strip-units($number) {
   @return $number / ($number * 0 + 1);
 }
-
-// == safe-rem()
-// -- Output REM and px value to old browsers
-// ## Usage
-// ##  p {
-// ##    @include safe-rem(font-size, 36px);
-// ##  }
-// ## Output
-// ##
-// ##  p {
-// ##    font-size: 36px;
-// ##    font-size: 3.6rem;
-// ##  }
-
-@mixin safe-rem ($property, $size) {
-  #{$property}: $size;
-  #{$property}: #{strip-units($size) / 10}rem;
-}
