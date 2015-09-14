@@ -6,6 +6,16 @@
 
 ### [Demo](http://filipelinhares.github.io/typ)
 
+## Installation
+**NPM**
+```sh
+npm install typ-css
+```
+**Bower**
+```sh
+bower install typ-css
+```
+
 ## Util
 - `.u-h[1~6]` - Alias class to `h1` and `h6` style.
 - `.u-quote` - Alias class to the `blockquote` style.
