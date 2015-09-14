@@ -7,7 +7,7 @@
 ### [Demo](http://filipelinhares.github.io/typ)
 
 ## Util
-- `.u-[1~6]` - Alias class to `h1` and `h6` style.
+- `.u-h[1~6]` - Alias class to `h1` and `h6` style.
 - `.u-quote` - Alias class to the `blockquote` style.
 - `.u-textEm` - Alias class to the `em` style.
 - `.u-textBold` - Alias to the `strong` style.
