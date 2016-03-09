@@ -1,0 +1,157 @@
+/* == typ.css 1.0.0
+ * -- A simple and minial typography template!
+ * ## Copyright 2015 Filipe Linhares.
+ * ## MIT License
+*/
+
+/* # Base
+   # ================================================================= */
+
+:root {
+  font-size: 100%;
+  hyphens: auto;
+  text-rendering: var(--text-rendering:);
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+/* # Headings
+   # ================================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: var(--heading-line-height);
+  font-weight: var(--heading-font-weight);
+  margin-top: var(--heading-margin-top);
+  margin-bottom: var(--heading-margin-bottom);
+}
+
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+h3 { font-size: var(--h3); }
+h4 { font-size: var(--h4); }
+h5 { font-size: var(--h5); }
+h6 { font-size: var(--h6); }
+
+/* # Basic
+   # ================================================================= */
+
+p { margin-bottom: var(--gap-2); }
+
+blockquote {
+  padding-left: var(--gap-2);
+  margin-bottom: var(--gap-2);
+}
+
+em { font-style: italic; }
+
+b,
+strong { font-weight: 700; }
+
+abbr {
+  font-weight: 600;
+  cursor: help;
+}
+
+figcaption {
+  font-size: inherit;
+  font-style: italic;
+}
+
+/* # https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+var { font-style: italic; }
+
+/* # Lists
+   # ================================================================= */
+
+ul { list-style: circle inside; }
+ol { list-style: decimal inside; }
+
+ol,
+ul,
+dl {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: var(--gap-2);
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: var(--gap-2);
+  margin-left: var(--gap-3);
+}
+
+dt,
+dd { line-height: 1.5; }
+
+/* # Code
+   # ================================================================= */
+
+pre code {
+  font-size: var(--font-family-code);
+  word-wrap: normal;
+  white-space: pre-wrap;
+}
+
+pre,
+code,
+samp {
+  font-family: monospace;
+  white-space: pre;
+  margin-bottom: var(--gap-2);
+}
+
+code,
+kbd,
+pre,
+samp { overflow-x: auto; }
+
+a { text-decoration: none; }
+
+a:hover,
+a:focus { text-decoration: underline; }
+
+:root {
+  --text-rendering: optimizeLegibility;
+  --font-size: 16px;
+  --line-height: 1.5;
+  --font-family: sans-serif;
+  --font-family-code: monospace;
+
+  --heading-line-height: 1.25;
+  --heading-font-weight: 700;
+  --heading-margin-top: var(--gap-2);
+  --heading-margin-bottom: var(--gap-1);
+
+  --h1: 2rem;
+  --h2: 1.5rem;
+  --h3: 1.25rem;
+  --h4: 1rem;
+  --h5: 0.875rem;
+  --h6: 0.75rem;
+
+  --gap-1: 0.5em;
+  --gap-2: 1em;
+  --gap-3: 2em;
+}
