@@ -10,7 +10,7 @@
 :root {
   font-size: 100%;
   hyphens: auto;
-  text-rendering: var(--text-rendering:);
+  text-rendering: var(--text-rendering);
   text-size-adjust: 100%;
 }
 
