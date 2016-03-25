@@ -1,14 +1,30 @@
-# Changelog
+## [v3.0.0]
 
-### 2.0.0
+### Added
+- stylelint
 
-- Added variables to headings size.
-- Added vertical rhythm variables.
-- Changed font-size root to 100%.
-- Changed debug variable as false.
-- Removed symbol from definition list.
-- Removed quotes in pseudo elements from bloquotes.
-- Removed typ-with-addons build.
-- Removed rem fallback.
-- Removed links style
+### Changed
+- Use cssnext instead of SASS
 
+### Removed
+- Bower
+- Vertical rhythm
+
+- - -
+
+## [v2.0.0]
+
+### Added
+- Variables to headings size.
+- Vertical rhythm variables.
+
+### Changed
+- Font-size root to 100%.
+- Debug variable as false.
+
+### Removed
+- Symbol from definition list.
+- Quotes in pseudo elements from bloquotes.
+- typ-with-addons build.
+- Rem fallback.
+- Links style
