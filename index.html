@@ -1,190 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typ</title>
 
-    <style>
-      img {
-        max-width: 100%;
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+
+  <link href='https://cdn.rawgit.com/filipelinhares/sanilize.css/master/dist/sanilize.min.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="dist/typ.min.css">
+
+  <style>
+    .typ-container {
+      font-family: 'Bree Serif', serif;
+      color: #333;
+      font-weight: 400;
+    }
+
+    .font-bree {
+      font-family: 'Bree Serif', serif;
+      font-weight: 400;
+    }
+
+    .fg-black {
+      color: #333;
+    }
+
+    .pY-50 {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    .container {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .typ-header {
+      background: rgba(124,194,243,1);
+      background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/wov.png");
+      background-blend-mode: multiply;
+      -webkit-background-blend-mode: multiply;
+      height: 80px;
+    }
+
+    .typ-hero {
+      background: rgba(85,162,216,1);
+      color: #f1f1f1;
+      padding: 40px 0;
+    }
+
+    .typ-hero h1 {
+      font-size: 50px;
+      font-weight: 400;
+      margin-top: 0;
+    }
+
+    .typ-hero span {
+      font-size: 24px;
+    }
+
+    nav {
+      margin-top: 40px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f1f1f1;
+      color: rgba(85,162,216,1);
+      padding: 6px 32px;
+      text-transform: uppercase;
+      border-radius: 3px;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      background: #ccc;
+      text-decoration: none;
+    }
+
+    .example {
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+      border: 1px solid #f1f1f1;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 2px;
+    }
+
+    code {
+      white-space: pre;
+      overflow: auto;
+      display: block;
+    }
+
+    @media screen and (max-width: 630px) {
+      .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
       }
 
-      hr {
-        margin-top: 2.4rem;
-        margin-bottom: 2.4rem;
-        border-width: 0;
-        border-top: .1rem solid #ccc;
+      .example {
+        width: 85%;
       }
-    </style>
 
-    <title> Typ test </title>
+      .container {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="typ-container">
+    <div class="typ-header"></div>
+    <div class="typ-hero">
+      <div class="container">
+        <h1>Typ</h1>
+        <span>A typography template in just 1.28KB</span>
+        <nav>
+          <a href="https://raw.githubusercontent.com/filipelinhares/typ/master/dist/typ.min.css" class="btn">Download</a>
+          <a href="#features" class="btn">Features</a>
+          <a href="#example" class="btn">Example</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <section class="pY-50">
+    <div class="container">
+      <h2 class="font-bree fg-black">Installation</h2>
+      <code>
+npm install --save typ-css
+      </code>
+    </div>
+  </section>
+  <section>
+    <div id="features" class="container">
+      <h2 class="font-bree fg-black">Features</h2>
+      <code class="fg-black">
+<strong>--text-rendering:</strong> optimizeLegibility;
+<strong>--font-size:</strong> 16px;
+<strong>--line-height:</strong> 1.5;
+<strong>--font-family:</strong> sans-serif;
+<strong>--font-family-code:</strong> monospace;
 
-    <meta name="author" content="filipelinhares">
-    <meta name="description" content="Typography">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<strong>--heading-line-height:</strong> 1.25;
+<strong>--heading-font-weight:</strong> 700;
+<strong>--heading-margin-top:</strong> var(--gap-2);
+<strong>--heading-margin-bottom:</strong> var(--gap-1);
 
-    <!-- Link to your stylesheet here -->
-    <link rel="stylesheet" href="dist/typ.css">
-  </head>
-  <body>
-    <!-- Quotes -->
-    <section class="quotes">
-      <h1>Blockquote and em</h1>
-      <blockquote>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate vero quas esse tempore, excepturi ducimus doloremque, quasi perferendis provident unde neque dolores earum nostrum aspernatur ex eaque alias, autem eum?
-      </blockquote>
-      <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, sed.</em>
-    </section>
+<strong>--h1:</strong> 2rem;
+<strong>--h2:</strong> 1.5rem;
+<strong>--h3:</strong> 1.25rem;
+<strong>--h4:</strong> 1rem;
+<strong>--h5:</strong> 0.875rem;
+<strong>--h6:</strong> 0.75rem;
 
-    <header>
-      <a href="#some-uknow-url" title="Site title"><h1 class="other-class">Site title</h1></a>
-      <nav>
-        <ul>
-          <li> <a href="#some-uknow-url" title="Home">Home</a> </li>
-          <li> <a href="#some-uknow-url" title="About">About</a> </li>
-          <li> <a href="#some-uknow-url" title="Sign Up">Sign Up</a> </li>
-          <li> <a href="#some-uknow-url" title="Contact">Contact</a> </li>
-          <li> <a href="#some-uknow-url" title="Careers">Careers</a> </li>
-        </ul>
-      </nav>
-    </header>
+<strong>--gap-1:</strong> 0.5em;
+<strong>--gap-2:</strong> 1em;
+<strong>--gap-3:</strong> 2em;
+      </code>
+      <a href="https://github.com/filipelinhares/typ/blob/master/lib/typ.css">and more...</a>
+    </div>
+  </section>
+  <section class="pY-50">
+    <div class="container">
+      <!-- Quotes -->
+    <div id="example" class="example">
+      <h2>demo</h2>
+      <section class="quotes">
+        <h1>Blockquote and em</h1>
+        <blockquote>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate vero quas esse tempore, excepturi ducimus doloremque, quasi perferendis provident unde neque dolores earum nostrum aspernatur ex eaque alias, autem eum?
+        </blockquote>
+        <em>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, sed.</em>
+      </section>
 
-    <section>
-      <h1>Headings &amp; Copy</h1>
-      <h1>First Header h1</h1>
-      <p>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-        praesentium voluptatum deleniti atque corrupti quos.
-      </p>
-      <h2>Second header h2</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <h3>Third header h3</h3>
-      <p>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-        praesentium voluptatum deleniti atque corrupti quos dolores et quas
-        molestias excepturi sint occaecati cupiditate non provident, similique sunt
-        in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-        fuga. Et harum quidem rerum facilis est et expedita distinctio.
-      </p>
-      <h4>Fourth header h4</h4>
-      <p>
-        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-        consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
-        ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
-        veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
-        ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
-        qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
-        qui dolorem eum fugiat quo voluptas nulla pariatur?"
-      </p>
-      <h5>Fifth header h5</h5>
-      <p>
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-        veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
-        ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-        consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-      </p>
-      <h6>Sixth header h6</h6>
-      <p>
-        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-        praesentium voluptatum deleniti atque corrupti quos.
-      </p>
-    </section>
-    <section>
-      <h1>Links</h1>
-      <a href="#some-uknow-url">Sample text link</a>
-      <a href="#some-uknow-url">Sample button link</a>
-    </section>
-    <section>
-      <h1>Lists</h1>
-      <h2>Unordered list</h2>
-      <ul>
-        <li>Orange</li>
-        <li>Apple</li>
-        <li>Rhubarb</li>
-        <li>Rasberry</li>
-        <li>Blueberry</li>
-        <li>Cherry</li>
-      </ul>
-      <h2>Ordered list</h2>
-      <ol>
-        <li>First</li>
-        <li>Second</li>
-        <li>Third</li>
-        <li>Fourth</li>
-        <li>Fifth</li>
-        <li>Sixth</li>
-      </ol>
-      <h2>Definition list</h2>
-      <dl>
-        <dt>
-        Kick
-        </dt>
-        <dd>
-        808
-        </dd>
-        <dt>
-        Snare
-        </dt>
-        <dd>
-        909
-        </dd>
-      </dl>
-      <dl>
-        <dt> Maine </dt>
-        <dd> Augusta </dd>
-        <dt> California </dt>
-        <dd> Sacremento </dd>
-        <dt> Oregon </dt>
-        <dd> Salem </dd>
-        <dt> New York </dt>
-        <dd> Albany </dd>
-      </dl>
-      <dl>
-        <dt> Ascender </dt>
-        <dd> The part of certain lowercase letters that extends above the x-height of a font.  </dd>
-        <dt> Font </dt>
-        <dd> Traditionally, a complete set of characters for one typeface at
-        one particular type size. Often used more loosely as a synonym for
-        "typeface".
-        </dd>
-        <dt> Golden Section </dt>
-        <dd>
-        The ideal proportion according to the ancient Greeks. It is visualized as the
-        division of a line into two unequal segments in such a way that the ratio of the
-        smaller segment to the larger segment is equal to the ratio of the larger to the
-        whole. It is usually defined as 21:34, that is, 21/34 and 34/(21+34) both equal
-        approximately 0.618. A rectangle whose sides are of this proportion is called a
-        "golden rectangle". Golden rectangles can be found in the proportions of the
-        Parthenon and many medieval manuscripts.
-        </dd>
-      </dl>
-    </section>
-    <section>
-      <h1>An Example Article</h1>
-      <article>
-        <h1>Title</h1>
+      <header>
+        <a href="#some-uknow-url" title="Site title"><h1 class="other-class">Site title</h1></a>
+        <nav>
+          <ul>
+            <li> <a href="#some-uknow-url" title="Home">Home</a> </li>
+            <li> <a href="#some-uknow-url" title="About">About</a> </li>
+            <li> <a href="#some-uknow-url" title="Sign Up">Sign Up</a> </li>
+            <li> <a href="#some-uknow-url" title="Contact">Contact</a> </li>
+            <li> <a href="#some-uknow-url" title="Careers">Careers</a> </li>
+          </ul>
+        </nav>
+      </header>
+
+      <section>
+        <h1>Headings &amp; Copy</h1>
+        <h1>First Header h1</h1>
         <p>
-          Lorem ipsum dolor sit amet, <strong>a strong tag example</strong>, sed do eiusmod
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+          praesentium voluptatum deleniti atque corrupti quos.
+        </p>
+        <h2>Second header h2</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud <em>exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat</em>. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
           non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <blockquote>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid sequi rem, illo ducimus iusto odio.
-          </p>
-          <a href="#some-uknow-url">- Author</a>
-        </blockquote>
+        <h3>Third header h3</h3>
+        <p>
+          At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+          praesentium voluptatum deleniti atque corrupti quos dolores et quas
+          molestias excepturi sint occaecati cupiditate non provident, similique sunt
+          in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+          fuga. Et harum quidem rerum facilis est et expedita distinctio.
+        </p>
+        <h4>Fourth header h4</h4>
         <p>
           Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
           consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
@@ -194,76 +229,220 @@
           qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
           qui dolorem eum fugiat quo voluptas nulla pariatur?"
         </p>
+        <h5>Fifth header h5</h5>
+        <p>
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+          veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim
+          ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
+          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+        </p>
+        <h6>Sixth header h6</h6>
         <p>
           At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-          praesentium voluptatum deleniti atque corrupti quos dolores et quas
-          molestias excepturi sint occaecati cupiditate non provident, similique sunt
-          in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
-          fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          praesentium voluptatum deleniti atque corrupti quos.
         </p>
-      </article>
-    </section>
-    <section>
-      <h1>Footer</h1>
-      <footer>
-        <p>Copyright 2013. Made with love by <a href="http://mrmrs.cc" title="MRMRS - Designer">mrmrs</a>.</p>
+      </section>
+      <section>
+        <h1>Links</h1>
+        <a href="#some-uknow-url">Sample text link</a>
+        <a href="#some-uknow-url">Sample button link</a>
+      </section>
+      <section>
+        <h1>Lists</h1>
+        <h2>Unordered list</h2>
         <ul>
-           <li>
-             <a href="#some-uknow-url">Home</a>
-           </li>
-           <li>
-             <a href="#some-uknow-url">Contact</a>
-           </li>
-           <li>
-             <a href="#some-uknow-url">Jobs</a>
-           </li>
+          <li>Orange</li>
+          <li>Apple</li>
+          <li>Rhubarb</li>
+          <li>Rasberry</li>
+          <li>Blueberry</li>
+          <li>Cherry</li>
         </ul>
-        <ul>
-           <li>
-             <a href="http://twitter.com" title=" on Twitter">Twitter</a>
-           </li>
-           <li>
-             <a href="http://pinterest.com" title=" on Pinterest">Pinterest</a>
-           </li>
-           <li>
-             <a href="http://instagram.com" title=" on Instagram">Instagram</a>
-           </li>
-           <li>
-             <a href="http://dribbbble.com" title=" on Dribbble">Dribbble</a>
-           </li>
-           <li>
-             <a href="http://github.com" title=" on Github">Github</a>
-           </li>
-        </ul>
-      </footer>
-    </section>
+        <h2>Ordered list</h2>
+        <ol>
+          <li>First</li>
+          <li>Second</li>
+          <li>Third</li>
+          <li>Fourth</li>
+          <li>Fifth</li>
+          <li>Sixth</li>
+        </ol>
+        <h2>Definition list</h2>
+        <dl>
+          <dt>
+          Kick
+          </dt>
+          <dd>
+          808
+          </dd>
+          <dt>
+          Snare
+          </dt>
+          <dd>
+          909
+          </dd>
+        </dl>
+        <dl>
+          <dt> Maine </dt>
+          <dd> Augusta </dd>
+          <dt> California </dt>
+          <dd> Sacremento </dd>
+          <dt> Oregon </dt>
+          <dd> Salem </dd>
+          <dt> New York </dt>
+          <dd> Albany </dd>
+        </dl>
+        <dl>
+          <dt> Ascender </dt>
+          <dd> The part of certain lowercase letters that extends above the x-height of a font.  </dd>
+          <dt> Font </dt>
+          <dd> Traditionally, a complete set of characters for one typeface at
+          one particular type size. Often used more loosely as a synonym for
+          "typeface".
+          </dd>
+          <dt> Golden Section </dt>
+          <dd>
+          The ideal proportion according to the ancient Greeks. It is visualized as the
+          division of a line into two unequal segments in such a way that the ratio of the
+          smaller segment to the larger segment is equal to the ratio of the larger to the
+          whole. It is usually defined as 21:34, that is, 21/34 and 34/(21+34) both equal
+          approximately 0.618. A rectangle whose sides are of this proportion is called a
+          "golden rectangle". Golden rectangles can be found in the proportions of the
+          Parthenon and many medieval manuscripts.
+          </dd>
+        </dl>
+      </section>
+      <section>
+        <h1>An Example Article</h1>
+        <article>
+          <h1>Title</h1>
+          <p>
+            Lorem ipsum dolor sit amet, <strong>a strong tag example</strong>, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud <em>exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat</em>. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <blockquote>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid sequi rem, illo ducimus iusto odio.
+            </p>
+            <a href="#some-uknow-url">- Author</a>
+          </blockquote>
+          <p>
+            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
+            ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+            veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi
+            ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit
+            qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum
+            qui dolorem eum fugiat quo voluptas nulla pariatur?"
+          </p>
+          <p>
+            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+            praesentium voluptatum deleniti atque corrupti quos dolores et quas
+            molestias excepturi sint occaecati cupiditate non provident, similique sunt
+            in culpa qui officia deserunt mollitia animi, id est laborum et dolorum
+            fuga. Et harum quidem rerum facilis est et expedita distinctio.
+          </p>
+        </article>
+      </section>
+      <section>
+        <h1>Footer</h1>
+        <footer>
+          <p>Copyright 2013. Made with love by <a href="http://mrmrs.cc" title="MRMRS - Designer">mrmrs</a>.</p>
+          <ul>
+             <li>
+               <a href="#some-uknow-url">Home</a>
+             </li>
+             <li>
+               <a href="#some-uknow-url">Contact</a>
+             </li>
+             <li>
+               <a href="#some-uknow-url">Jobs</a>
+             </li>
+          </ul>
+          <ul>
+             <li>
+               <a href="http://twitter.com" title=" on Twitter">Twitter</a>
+             </li>
+             <li>
+               <a href="http://pinterest.com" title=" on Pinterest">Pinterest</a>
+             </li>
+             <li>
+               <a href="http://instagram.com" title=" on Instagram">Instagram</a>
+             </li>
+             <li>
+               <a href="http://dribbbble.com" title=" on Dribbble">Dribbble</a>
+             </li>
+             <li>
+               <a href="http://github.com" title=" on Github">Github</a>
+             </li>
+          </ul>
+        </footer>
+      </section>
 
-    <section>
-      <header>
-        <h1>Random Stuff</h1>
-      </header>
-      <p>
-        <small>This is for things like copyright info</small>
-        <del>Content that isn't accurate or relevant anymore.</del>
-        <ins>This text has been inserted</ins>
-        <span>Generic span wrapper</span>
-        <abbr>HTML How to meet ladies</abbr>
-      </p>
-      <p>This is inline text with <sub>subscript</sub> and <sup>superscript</sup> elements.</p>
-      <p>
-        <var>f</var>(<var>x</var>) = <var>a</var><sub>0</sub> + <var>a</var><sub>1</sub><var>x</var> +
-        <var>a</var><sub>2</sub><var>x</var><sup>2</sup>, where <var>a</var><sup>2</sup> ≠ 0
-      </p>
-      <p>
-        <time datetime="2013-09-07" pubdate>07 September 2013</time>
-      </p>
-    </section>
-    <section>
-      <h1>Footer</h1>
-      <footer>
-        <small>© 2014 Some company name</small>
-        <address>email@email.com</address>
-      </footer>
-    </section>
-  </body>
+      <section>
+        <header>
+          <h1>Random Stuff</h1>
+        </header>
+        <p>
+          <small>This is for things like copyright info</small>
+          <del>Content that isn't accurate or relevant anymore.</del>
+          <ins>This text has been inserted</ins>
+          <span>Generic span wrapper</span>
+          <abbr>HTML How to meet ladies</abbr>
+        </p>
+        <p>This is inline text with <sub>subscript</sub> and <sup>superscript</sup> elements.</p>
+        <p>
+          <var>f</var>(<var>x</var>) = <var>a</var><sub>0</sub> + <var>a</var><sub>1</sub><var>x</var> +
+          <var>a</var><sub>2</sub><var>x</var><sup>2</sup>, where <var>a</var><sup>2</sup> ≠ 0
+        </p>
+        <p>
+          <time datetime="2013-09-07" pubdate>07 September 2013</time>
+        </p>
+      </section>
+      <section>
+        <h1>Footer</h1>
+        <footer>
+          <small>© 2014 Some company name</small>
+          <address>email@email.com</address>
+        </footer>
+      </section>
+      </div>
+    </div>
+  </section>
+  <a href="http://github.com/filipelinhares/typ" class="github-corner"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#55a2d8; position: absolute; top: 0; border: 0; right: 0;"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter36833895 = new Ya.Metrika({
+                      id:36833895,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true,
+                      webvisor:true
+                  });
+              } catch(e) { }
+          });
+
+          var n = d.getElementsByTagName("script")[0],
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); };
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/36833895" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
+</body>
 </html>
