@@ -64,19 +64,6 @@ figcaption {
   font-style: italic;
 }
 
-/* # https://gist.github.com/unruthless/413930 */
-sub,
-sup {
-  position: relative;
-  font-size: 75%;
-  line-height: 0;
-  vertical-align: baseline;
-}
-
-sup { top: -0.5em; }
-sub { bottom: -0.25em; }
-var { font-style: italic; }
-
 /* # Lists */
 
 ul { list-style: circle inside; }
@@ -97,9 +84,6 @@ ol ul {
   margin-bottom: var(--gap-2);
   margin-left: var(--gap-3);
 }
-
-dt,
-dd { line-height: 1.5; }
 
 /* # Code */
 
