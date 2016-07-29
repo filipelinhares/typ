@@ -9,7 +9,7 @@
 
 ## Installation
 ```sh
-npm install typ-css
+npm install typcss
 ```
 
 ## Resources
