@@ -1,5 +1,5 @@
 /*!
- * typ.css • v3.1.2
+ * typ.css • v3.2.2
  * MIT License
  * github.com/filipelinhares/typ
  */
@@ -110,7 +110,8 @@ samp { overflow-x: auto; }
   --text-rendering: optimizeLegibility;
   --font-size: 16px;
   --line-height: 1.5;
-  --font-family: sans-serif;
+  /* The New System Font Stack - https://bitsofco.de/the-new-system-font-stack */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-family-code: monospace;
 
   --heading-line-height: 1.25;
