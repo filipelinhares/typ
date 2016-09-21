@@ -1,3 +1,8 @@
+## [v3.2.2]
+
+### Added
+- [The new system font stack](https://bitsofco.de/the-new-system-font-stack)
+
 ## [v3.0.0]
 
 ### Added
